@@ -44,7 +44,6 @@ export function Team () {
 
 const styles = StyleSheet.create({
     container: {
-        backgroundColor: colors.background,
         flex: 1
     },
 

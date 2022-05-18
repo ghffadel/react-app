@@ -28,8 +28,12 @@ export function Home () {
     const navigation = useNavigation();
 
     function handleButtonPress (id) {
-        if (id == 3) {
-            navigation.navigate("Team");
+        if (id == 1) {
+            navigation.navigate("História");
+        }
+
+        else if (id == 3) {
+            navigation.navigate("Equipe");
         }
     }
 
@@ -54,7 +58,6 @@ export function Home () {
 
 const styles = StyleSheet.create({
     container: {
-        backgroundColor: colors.background,
         flex: 1
     },
 
