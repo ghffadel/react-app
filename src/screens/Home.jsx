@@ -1,3 +1,4 @@
+import { useNavigation } from "@react-navigation/native";
 import React from "react";
 import { FlatList, StyleSheet, View } from "react-native";
 
@@ -24,6 +25,14 @@ const CardsData = [
 ];
 
 export function Home () {
+    const navigation = useNavigation();
+
+    function handleButtonPress (id) {
+        if (id == 3) {
+            navigation.navigate("Team");
+        }
+    }
+
     return (
         <View style={ styles.container }>
             <View style={ styles.cards }>
@@ -33,6 +42,7 @@ export function Home () {
                     renderItem={ ({ item }) => (
                         <Card 
                             data={ item }
+                            onPress={ () => handleButtonPress(item.id) }
                         />
                     ) }
                     showsVerticalScrollIndicator={ false }
