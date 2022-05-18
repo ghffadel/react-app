@@ -4,6 +4,8 @@ import { FlatList, StyleSheet, View } from "react-native";
 
 import { Card } from "../components/Card";
 
+import colors from "../styles/colors";
+
 const CardsData = [
     {
         id: 1,
@@ -60,6 +62,7 @@ export function Home () {
 
 const styles = StyleSheet.create({
     container: {
+        backgroundColor: colors.white,
         flex: 1
     },
 
