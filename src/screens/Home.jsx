@@ -4,8 +4,6 @@ import { FlatList, StyleSheet, View } from "react-native";
 
 import { Card } from "../components/Card";
 
-import colors from "../styles/colors";
-
 const CardsData = [
     {
         id: 1,
@@ -30,6 +28,10 @@ export function Home () {
     function handleButtonPress (id) {
         if (id == 1) {
             navigation.navigate("História");
+        }
+
+        else if (id == 2) {
+            navigation.navigate("Funcionamento");
         }
 
         else if (id == 3) {
